@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server" lang="zh-cn">
     <!--导入bootstrap css文件-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--适配-->
 
@@ -54,7 +54,7 @@
                                 <div class="dropdown-menu row">
                                     <asp:Button ID="Button_sign" class="dropdown-item" runat="server" Text="登录" Visible="true" OnClick="Button_sign_Click" />
                                     <asp:Button ID="Button_register" class="dropdown-item" runat="server" Text="注册" OnClick="Button_register_Click" />
-                                    <asp:Button ID="Button_user" class="dropdown-item" runat="server" Text="我的微博" OnClick="Button_user_Click" />
+                                    <asp:Button ID="Button_user" class="dropdown-item" runat="server" Text="我的评论" OnClick="Button_user_Click" />
                                     <asp:Button ID="Button_friend" class="dropdown-item" runat="server" Text="好友列表" OnClick="Button_friend_Click" />
                                     <asp:Button ID="Button_modify" class="dropdown-item" runat="server" Text="修改信息" OnClick="Button_modify_Click" />
                                     <asp:Button ID="Button_admin" class="dropdown-item" runat="server" Text="管理" OnClick="Button_admin_Click" />
@@ -100,7 +100,7 @@
             </div>
             <div class="row card mb-3" style="background-color: #000000;">
                 <div class="card-header" style="background-color: #F7971D">
-                    <h5 class="text-center" style="font-weight: bolder; background-color: #F7971D; color: #000000;">发表评论</h5>
+                    <h5 class="text-center" style="font-weight: bolder; background-color: #F7971D; color: #000000;">发表留言</h5>
                 </div>
                 <div class="card-body" style="background-color: #000000">
                     <div class="col text-center container">
@@ -120,7 +120,7 @@
 
                         <div class="col-auto">
                             <h5 style="color: #000000;">
-                                <b>评论列表</b>
+                                <b>留言列表</b>
                             </h5>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
 
                     <div class="card-body container " style="background-color: #000000">
                         <div class="container text-center" style="color: #FFFFFF; font-size: 30px; font-weight: bolder;">
-                            <asp:Label ID="Label_nothing" runat="server" Text="您还没有发评论！" Visible="false"></asp:Label>
+                            <asp:Label ID="Label_nothing" runat="server" Text="您还没有发留言！" Visible="false"></asp:Label>
                         </div>
                         <br />
                         <asp:ListView ID="ListView1" runat="server" OnItemCommand="ListView1_SelectedIndexChanged">
@@ -211,9 +211,9 @@
         </div>
         <br />
     </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
 <footer class="footer" style="background-color: #000000">

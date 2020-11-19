@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server" lang="zh-cn">
     <!--导入bootstrap css文件-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--适配-->
 
@@ -56,7 +56,7 @@
                                 <div class="dropdown-menu row">
                                     <asp:Button ID="Button_sign" class="dropdown-item" runat="server" Text="登录" Visible="true" OnClick="Button_sign_Click" />
                                     <asp:Button ID="Button_register" class="dropdown-item" runat="server" Text="注册" OnClick="Button_register_Click" />
-                                    <asp:Button ID="Button_user" class="dropdown-item" runat="server" Text="我的微博" OnClick="Button_user_Click" />
+                                    <asp:Button ID="Button_user" class="dropdown-item" runat="server" Text="我的评论" OnClick="Button_user_Click" />
                                     <asp:Button ID="Button_friend" class="dropdown-item" runat="server" Text="好友列表" OnClick="Button_friend_Click" />
                                     <asp:Button ID="Button_modify" class="dropdown-item" runat="server" Text="修改信息" OnClick="Button_modify_Click" />
                                     <asp:Button ID="Button_admin" class="dropdown-item" runat="server" Text="管理" OnClick="Button_admin_Click" />
@@ -86,7 +86,7 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/img/img1.png" class="d-block w-100" alt="...">
+                            <img src="/img/img3.png" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
                             <img src="/img/img2.png" class="d-block w-100" alt="...">
@@ -113,7 +113,7 @@
 
                             <h5 class="card-header text-center " style="background-color: #F7971D; color: #000000;">
                                 <b>
-                                    <asp:Label ID="Label2" runat="server" Text="发个微博？"></asp:Label>
+                                    <asp:Label ID="Label2" runat="server" Text="发个评论？"></asp:Label>
                                 </b>
                             </h5>
                             <div class="card-body" style="background-color: #000000">
@@ -136,7 +136,7 @@
 
                                 <div class="col-auto">
                                     <h5 style="color: #000000;">
-                                        <b>微博广场</b>
+                                        <b>评论广场</b>
                                     </h5>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
 
                             <div class="card-body container " style="background-color: #000000">
                                 <div class="container text-center" style="color: #FFFFFF; font-size: 30px; font-weight: bolder;">
-                                    <asp:Label ID="Label_nothing" runat="server" Text="广场中没有微博！" Visible="false"></asp:Label>
+                                    <asp:Label ID="Label_nothing" runat="server" Text="广场中没有评论！" Visible="false"></asp:Label>
                                 </div>
                                 <br />
                                 <asp:ListView ID="ListView1" runat="server" OnItemCommand="ListView1_SelectedIndexChanged">
@@ -212,7 +212,7 @@
                                             <div class="card-footer text-muted" style="background: #333333">
                                                 <div class="container">
                                                     <div class="row justify-content-between">
-                                                        <asp:Button ID="Button_comment" class="col-2 btn btn-sm btn-outline-warning " runat="server" Text="评论" CommandName="Comment" CommandArgument='<%# Eval("id_blog")%>' />
+                                                        <asp:Button ID="Button_comment" class="col-2 btn btn-sm btn-outline-warning " runat="server" Text="留言" CommandName="Comment" CommandArgument='<%# Eval("id_blog")%>' />
                                                         <asp:Button ID="Button1" class="col-2 btn btn-sm btn-outline-warning" runat="server" Text="点赞" CommandName="Nice" CommandArgument='<%# Eval("id_blog")%>' />
 
                                                     </div>
@@ -232,9 +232,9 @@
 
         <br />
     </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
 <footer class="footer" style="background-color: #000000">

@@ -19,8 +19,26 @@ public partial class modify : System.Web.UI.Page
         {
             if (Session["id"] != null && Session["name"] != null)
             {
-                Button_sign.Visible = false;
-                Button_register.Visible = false;
+                if (Session["power"].ToString() == "admin")
+                {
+                    Button_sign.Visible = false;
+                    Button_register.Visible = false;
+                }
+                else if (Session["power"].ToString() == "normal")
+                {
+                    Button_sign.Visible = false;
+                    Button_register.Visible = false;
+                    Button_admin.Visible = false;
+                }
+                else
+                {
+                    Session["id"] = null;
+                    Session["name"] = null;
+                    Session["power"] = null;
+                    Response.Write("<script>alert('权限出错！');location.href='index.aspx';</script>");
+
+                }
+                Label1.Text = Session["name"].ToString();
             }
             else
             {
@@ -29,6 +47,7 @@ public partial class modify : System.Web.UI.Page
                 Button_admin.Visible = false;
                 Button_modify.Visible = false;
                 Button_out.Visible = false;
+
             }
         }
     }
@@ -114,7 +133,7 @@ public partial class modify : System.Web.UI.Page
                     ada5.Fill(ds);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
-                        string Sqlmodify3 = "update Friends set friend_introduction='" + INTRO + "', friend_name='"+ Name +"' where friend_id='" + ID + "'";
+                        string Sqlmodify3 = "update Friends set friend_introduction='" + INTRO + "', friend_name='" + Name + "' where friend_id='" + ID + "'";
                         SqlCommand mycom3 = new SqlCommand(Sqlmodify3, con);
                         mycom3.ExecuteNonQuery();     //执行插入语句
                     }

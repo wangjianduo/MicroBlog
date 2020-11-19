@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--导入bootstrap css文件-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!--适配-->
 
@@ -21,7 +21,7 @@
             <div class="container text-center">
                 <asp:GridView ID="GridView1" class="table table-bordered table-striped col-lg-4" runat="server" AllowPaging="True" PageSize="8" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnSelectedIndexChanging="GridView1_SelectedIndexChanging" OnRowCreated="GridView1_RowCreated" OnPageIndexChanging="GridView1_PageIndexChanging" OnRowCommand="GridView1_RowCommand">
                     <Columns>
-                        <asp:TemplateField HeaderText="评论ID">
+                        <asp:TemplateField HeaderText="留言ID">
                             <EditItemTemplate>
                                 <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("id_comment") %>'></asp:TextBox>
                             </EditItemTemplate>
@@ -53,7 +53,7 @@
                                 <asp:Label ID="Label4" runat="server" Text='<%# Eval("text").ToString().Length>10?Eval("text").ToString().Substring(0,10)+"...":Eval("text") %>'></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="微博ID">
+                        <asp:TemplateField HeaderText="评论ID">
                             <EditItemTemplate>
                                 <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("id_blog") %>'></asp:TextBox>
                             </EditItemTemplate>
@@ -79,9 +79,9 @@
                                 <asp:Button ID="comment_edit" CssClass="btn btn-sm btn-primary" runat="server" Text='编辑' CommandName="comment_edit" CommandArgument='<%# Bind("id_comment") %>' />
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="查看微博">
+                        <asp:TemplateField HeaderText="查看评论">
                             <ItemTemplate>
-                                <asp:Button ID="comment_blog" CssClass="btn btn-sm btn-primary" runat="server" Text='编辑' CommandName="comment_blog" CommandArgument='<%# Bind("id_blog") %>' />
+                                <asp:Button ID="comment_blog" CssClass="btn btn-sm btn-primary" runat="server" Text='查看' CommandName="comment_blog" CommandArgument='<%# Bind("id_blog") %>' />
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
@@ -98,8 +98,8 @@
             </div>
         </div>
     </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>

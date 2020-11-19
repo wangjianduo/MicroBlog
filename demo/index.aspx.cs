@@ -47,7 +47,7 @@ public partial class main : System.Web.UI.Page
 
             }
             Label1.Text = Session["name"].ToString();
-            Label2.Text = Session["name"].ToString() + "，发个微博？";
+            Label2.Text = Session["name"].ToString() + "，发个评论？";
         }
         else
         {
@@ -58,7 +58,7 @@ public partial class main : System.Web.UI.Page
             Button_out.Visible = false;
 
         }
-        //微博排序
+        //评论排序
         if (Session["state"] == null)
         {
             string ConStr = "server=(local);user id=sa;pwd=19991021391X;database=microblog";

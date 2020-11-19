@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>MicroBlog 管理后台</title>
 </head>
-<frameset cols="18%,*">
+<frameset cols="45%,*">
     <frame name="menu" src="Menu.html">
     <frame name="main" src="help.html">
         <noframes></noframes>
